@@ -1,0 +1,23 @@
+{
+    "name": "peartonlixiao/qr-code",
+    "description": "基于phpqrcode生成二维码的工具类",
+    "keywords": ["phpqrcode", "二维码生成", "工具类"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lxd",
+            "email": "pearton@126.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Peartonlixiao\\Qrcode\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.0",
+      "ext-gd": "*"
+    }
+}
