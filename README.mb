@@ -1,3 +1,55 @@
-基于phpqrcode生成二维码的工具类
+# 二维码生成
 
-justone.top
+基于phpqrcode生成二维码,使用简单。
+
+## 特点
+
+1. 不需其他扩展下载安装
+2. 可自定义logo
+3. 快速生成
+
+## Install
+
+`composer require "pearton/qr-code"`
+
+## Usage
+
+```php
+//如使用laravel tp等,则自动加载
+require 'vendor/autoload.php';  
+use Peartonlixiao\Qrcode\QrcodeTool;  
+
+$create = QrcodeTool::getInstance()
+    ->setProperty('logo','https://cdn.blog.justone.top/default.png')
+    ->setProperty('outputDir','/qrcode/create/')
+    ->getTypeQrCodeLogo('test');
+    
+var_dump($create);
+exit;
+```
+
+```
+// 返回结果
+array(4) {
+  ["code"]=>
+  int(200)
+  ["msg"]=>
+  string(12) "上传成功"
+  ["data"]=>
+  string(51) "/qrcode/create/26766286bde1432bf2e3ae7d1415a934.png"
+  ["fileName"]=>
+  string(36) "26766286bde1432bf2e3ae7d1415a934.png"
+}
+```
+
+#### Laravel,TP等
+
+`laravel`及`THINKPHP`等框架:
+
+1.安装该插件
+
+2.然后开始在你的项目里面使用了 `QrcodeTool::getInstance()...`
+
+## License
+MIT
+
