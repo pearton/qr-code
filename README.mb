@@ -19,10 +19,19 @@
 require 'vendor/autoload.php';
 use Peartonlixiao\Qrcode\QrcodeTool;
 
+//生成带logo的二维码
 $create = QrcodeTool::getInstance()
+    //设置中间logo,如不写入该参数,则使用默认https://cdn.blog.justone.top/default.png
     ->setProperty('logo','https://cdn.blog.justone.top/default.png')
+    //设置输出文件夹,默认[qrcode/]
     ->setProperty('outputDir','/qrcode/create/')
+    //执行,参数为写入二维码的内容[字符串,网址,参数 自行定义]
     ->getTypeQrCodeLogo('test');
+
+//生成图片二维码
+$create = QrcodeTool::getInstance()
+    //执行,参数为写入二维码的内容[字符串,网址,参数 自行定义]
+    ->getTypeQrCode('test');
     
 var_dump($create);
 exit;
