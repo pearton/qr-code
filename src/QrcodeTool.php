@@ -55,7 +55,7 @@ class QrcodeTool
     public function getTypeQrCode($strContent,$matrixPointSize = 20):array
     {
         $errorCorrectionLevel = 'L';  //容错级别
-        require_once "../phpqrcode/phpqrcode.php";
+        require_once __DIR__."/../phpqrcode/phpqrcode.php";
 
         //本地保存
         $dir = $this->outputDir;
@@ -83,7 +83,7 @@ class QrcodeTool
     public function getTypeQrCodeLogo($strContent,$matrixPointSize = 20):array
     {
         $errorCorrectionLevel = 'H';                    //容错级别
-        require_once "../phpqrcode/phpqrcode.php";
+        require_once __DIR__."/../phpqrcode/phpqrcode.php";
 
         //本地保存
         $dir = $this->outputDir;
